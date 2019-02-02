@@ -11,7 +11,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: '次にデジハリに来る日程を決めましょう！'
+      msg: '次にスタジオに来る日程を決めましょう！'
     }
   }
 }
