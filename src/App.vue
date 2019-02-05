@@ -1,10 +1,21 @@
 <template>
   <div id="app">
     <header>
-      <span>スタジオへGo!!</span>
+      <div class="navgation_left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="17" y1="10" x2="3" y2="10"></line>
+          <line x1="21" y1="6" x2="3" y2="6"></line>
+          <line x1="21" y1="14" x2="3" y2="14"></line>
+          <line x1="17" y1="18" x2="3" y2="18"></line>
+        </svg></div>
+      <a href="/"><div class="title">STUDIOgo!!</div></a>
+      <div class="User_settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+        </path><circle cx="12" cy="7" r="4"></circle>
+        </svg></div>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
       <router-view></router-view>
     </main>
   </div>
@@ -22,33 +33,43 @@ body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans JP', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
-
 main {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
-
 header {
   margin: 0;
-  height: 84px;
-  padding: 0 16px 0 24px;
-  background-color: #EC6C00;
-  color: #ffffff;
+  height: 60px;
+  background: rgb(239,157,67);
+  background: linear-gradient(90deg, rgba(239,157,67,1) 0%, rgba(244,144,101,1) 100%);
 }
 
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .03em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 34px;
+svg {
+  color:white;
+}
+.navgation_left{
+  position: absolute;
+  top:18px;
+  left: 24px;
+}
+.title{
+  color:white;
+  font-size:20px;
+  font-weight:700;
+  position: absolute;
+  top:18px;
+  width: 100%;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.User_settings{
+  position: absolute;
+  top:18px;
+  right: 24px;
 }
 </style>
