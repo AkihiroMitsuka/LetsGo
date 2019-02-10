@@ -11,6 +11,8 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "buefy": "^0.7.2",
+    "firebaseui": "^3.5.2",
     "muse-ui": "^3.0.1",
     "push.js": "^1.0.9",
     "vue": "^2.5.2",

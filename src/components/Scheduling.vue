@@ -1,23 +1,28 @@
 <template>
-  <div id="event">
-    <router-link to="/">Welcome-page</router-link>
-    <div class="field">
-        <b-switch>通知</b-switch>
+<div id="event">
+
+    <div class="top-text">
+        <p>Decide the day to go to STUDIO</p>
     </div>
-    <b-field label="">
-        <b-datepicker
-            placeholder="何日にする?" icon="calendar-today"
-            :monday-first="manday"
-            :min-date="minDate"
-            :unselectable-days-of-week="[1]"
-            :first-day-of-week="[1]"
-            :mobile-native="true"
-            >
-        </b-datepicker>
-    </b-field>
-    <!-- 表示は曜日によって分けられるようにによう -->
-    <b-select placeholder="時間を指定する">
-        <option disabled>月水木金</option>
+
+    <div class="Datepicer">
+    <p>School visit date</p>
+        <b-field v-model="newEventsData">
+            <b-datepicker
+                placeholder="Add Data" icon="calendar-today"
+                :monday-first="manday"
+                :min-date="minDate"
+                :unselectable-days-of-week="[1]"
+                :first-day-of-week="[1]"
+                :mobile-native="true"
+                >
+        </b-datepicker></b-field>
+    </div>
+
+    <div class="Timeselecter">
+    <p>Campus time</p>
+    <b-select placeholder="Add time" v-model="newEventTime">
+        <option disabled>火水木金</option>
         <option>12:00</option>
         <option>13:00</option>
         <option>14:00</option>
@@ -38,31 +43,50 @@
         <option>16:00</option>
         <option>17:00</option>
         <option>18:00</option>
-        <option>19:00</option>
-    </b-select>
-    <button class="button">決定</button>
-
-
-    <div class="add_item">
-
+        <option>19:00</option></b-select>
+    </div>
+    <!-- 表示は曜日によって分けられるようにによう -->
+    <div class="noti">
+        <b-switch v-model="newEventNotication">Notification settings</b-switch>
+    </div>
+    <div class="Button_Outside">
+        <router-link to="/" tag="button">Create</router-link>
     </div>
 </div>
 </template>
 
 <script>
-export default {
-  data () {
-    const today = new Date()
-    return {
-      date: new Date(),
-      minDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() - 5),
-      maxDate: new Date(today.getFullYear(), today.getMonth(), today.getDate() + 5),
-      isActive: false
-    }
-  }
-}
 </script>
 
 <style>
-
+#event{
+    width: 100%;
+    padding: 20px;
+}
+.top-text{
+    margin-bottom: 32px;
+    font-weight: 600;
+    text-align: center
+}
+.Datepicer{
+    margin-bottom:20px; 
+}
+.Datepicer p {
+    font-size:14px;
+    font-weight: 600;
+}
+.Timeselecter{
+    margin-bottom: 24px;
+}
+.Timeselecter p {
+    font-size:14px;
+    font-weight: 600;
+}
+.noti{
+    margin-bottom: 20px;
+}
+.noti {
+    font-size:14px;
+    font-weight: 600;
+}
 </style>
