@@ -1,91 +1,97 @@
 <template>
 <div id="event">
-
-    <div class="top-text">
-        <p>Decide the day to go to STUDIO</p>
-    </div>
-
+    <h1 class="pagetitle">Scheduling</h1>
+    <hr>
     <div class="Datepicer">
-    <p>School visit date</p>
-        <b-field v-model="newEventsData">
+        <b-field v-model="newEventsData" label="Serected Data">
             <b-datepicker
                 placeholder="Add Data" icon="calendar-today"
                 :monday-first="manday"
                 :min-date="minDate"
                 :unselectable-days-of-week="[1]"
                 :first-day-of-week="[1]"
-                :mobile-native="true"
+                :mobile-native="false"
                 >
         </b-datepicker></b-field>
     </div>
 
     <div class="Timeselecter">
-    <p>Campus time</p>
-    <b-select placeholder="Add time" v-model="newEventTime">
-        <option disabled>火水木金</option>
-        <option>12:00</option>
-        <option>13:00</option>
-        <option>14:00</option>
-        <option>15:00</option>
-        <option>16:00</option>
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option>
-        <option>20:00</option>
-        <option>21:00</option>
-        <option disabled>土日</option>
-        <option>10:00</option>
-        <option>11:00</option>
-        <option>12:00</option>
-        <option>13:00</option>
-        <option>14:00</option>
-        <option>15:00</option>
-        <option>16:00</option>
-        <option>17:00</option>
-        <option>18:00</option>
-        <option>19:00</option></b-select>
+        <b-field v-model="newEventsData" label="Selected Time">
+            <b-select placeholder="Add time" icon="clock" v-model="newEventTime">
+            <option disabled>火水木金</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+            <option disabled>土日</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+            </b-select>
+        </b-field>
     </div>
     <!-- 表示は曜日によって分けられるようにによう -->
-    <div class="noti">
-        <b-switch v-model="newEventNotication">Notification settings</b-switch>
-    </div>
-    <div class="Button_Outside">
-        <router-link to="/" tag="button">Create</router-link>
+    <div class="scfrom_buttom">
+        <b-switch class="Notification" v-model="newEventNotication">Notification settings</b-switch>
+        <button class="button block" @click="cresteData">Create</button>
     </div>
 </div>
 </template>
 
 <script>
+export default {
+  methods: {
+    cresteData () {
+      this.$snackbar.open(`Default, positioned bottom-right with a green 'OK' button`)
+    }
+  }
+}
 </script>
 
 <style>
+/* 独自Style */
 #event{
-    width: 100%;
-    padding: 20px;
+    padding: 24px;
 }
-.top-text{
-    margin-bottom: 32px;
-    font-weight: 600;
-    text-align: center
+.pagetitle{
+    font-size: 28px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
 }
 .Datepicer{
     margin-bottom:20px; 
 }
-.Datepicer p {
-    font-size:14px;
-    font-weight: 600;
-}
+
 .Timeselecter{
     margin-bottom: 24px;
 }
-.Timeselecter p {
+.noti{
+    margin-bottom: 20px;
     font-size:14px;
     font-weight: 600;
 }
-.noti{
-    margin-bottom: 20px;
+.field{
+    margin-bottom: 30px;
 }
-.noti {
+.scfrom_buttom{
+    display: flex;
+    flex-direction : column
+}
+.Notification{
+    margin-bottom: 36px;
     font-size:14px;
     font-weight: 600;
 }

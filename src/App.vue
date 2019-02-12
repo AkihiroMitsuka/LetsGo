@@ -19,12 +19,41 @@
             <small>ページ各種(そのうちUserOptionNav)</small>
           </b-dropdown-item>
           <hr class="dropdown-divider">
-          <b-dropdown-item><router-link to="/">Welcome</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/Scheduling">Scheduling</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/settings">Settings</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/signin">signin</router-link></b-dropdown-item>
-          <b-dropdown-item><router-link to="/register">Register</router-link></b-dropdown-item>
-          <b-dropdown-item>Logout</b-dropdown-item>
+
+          <router-link to="/">
+          <b-dropdown-item>Welcome</b-dropdown-item></router-link>
+        
+          <router-link to="/Scheduling">
+          <b-dropdown-item>Scheduling</b-dropdown-item></router-link>
+
+          <router-link to="/Signup">
+          <b-dropdown-item>Signup</b-dropdown-item></router-link>
+
+          <router-link to="/Signin">
+          <b-dropdown-item>Signin</b-dropdown-item></router-link>
+          
+          <router-link to="/Guide">
+          <b-dropdown-item>Guide</b-dropdown-item></router-link>
+
+          <router-link to="/Guide">
+          <b-dropdown-item>
+            <b-icon icon="bell"></b-icon>
+              通知
+            </b-dropdown-item>
+          </router-link>
+
+          <router-link to="/settings">
+            <b-dropdown-item value="settings">
+              <b-icon icon="settings"></b-icon>
+              設定
+            </b-dropdown-item>
+          </router-link>
+
+          <b-dropdown-item value="logout">
+              <b-icon icon="logout"></b-icon>
+              ログアウト
+          </b-dropdown-item>
+
         </b-dropdown>
       </section>
     </header>
@@ -41,6 +70,7 @@ export default{
 </script>
 
 <style>
+/* 独自Style */
 header{
   height: 60px;
   width: 100%;
@@ -51,5 +81,12 @@ header{
 .title{
   font-size:20px;
   font-weight: 700;
+}
+.navgation_left{
+  
+}
+/* 共通Style */
+hr{
+  margin: 6px 0 38px 0;
 }
 </style>

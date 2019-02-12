@@ -4,20 +4,22 @@ import Router from 'vue-router'
 // import Form from '@/components/Form'
 import Scheduling from "@/components/Scheduling"
 import Welcome from "@/components/Welcome"
-import register from "@/components/Auth/register"
-import signin from "@/components/Auth/signin"
+import Signup from "@/components/Auth/Signup"
+import Signin from "@/components/Auth/Signin"
 import passwordreset from "@/components/Auth/passwordreset"
 import settings from "@/components/settings"
+import Guide from "@/components/Guide"
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     { path: "/", name: "Welcome", component: Welcome },
+    { path: "/Signup", name: "Signup", component: Signup },
+    { path: "/Signin", name: "Signin", component: Signin },
     { path: "/Scheduling", name: "Scheduling", component: Scheduling },
     { path: "/settings", name: "settings", component: settings },
-    { path: "/register", name: "register", component: register },
     { path: "/passwordreset", name: "passwordreset", component: passwordreset },
-    { path: "/signin", name: "signin", component: signin }
+    { path: "/Guide", name: "Guide", component: Guide }
   ]
 })

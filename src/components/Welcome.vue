@@ -1,15 +1,21 @@
 <template>
 <div id="wolcome">
-    <div class="Welcome_text">
-        <h1>Welcome to SUTUDIOgo!!</h1>
-        <p>You can add a schedule anytime, anywhere</p>
-        <p>Let's use it immediately</p>
-    </div>
-    <div class="Event_create_inner">
-        <router-link to="/register">
-            <div class="Event_create_page">
-                Create a User
+    <section class="hero is-medium is-primary is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                Welcome to SUTUDIOgo!!
+                </h1>
+                <p class="subtitle">
+                You can add a schedule anytime, anywhere
+                Let's use it immediately
+                </p>
             </div>
+        </div>
+    </section>
+    <div class="Event_create_inner">
+        <router-link to="/Signin">
+            <div class="Event_create_page">Sign up</div>
         </router-link>
     </div>  
 </div>
@@ -19,26 +25,26 @@ export default {
 }
 </script>
 <style>
+/* 独自Style */
     #wolcome{
-        padding: 20px;
         display: flex;
         flex-direction: column;
     }
-    .Welcome_text{
-        text-align: center;
-        margin-bottom: 28px; 
+    .hero{
+        margin-bottom: 32px;
     }
-    .Welcome_text h1 {
-        font-weight: 700;
+    .Event_create_inner{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
     }
     .Event_create_page{
         padding: 12px 28px;
         font-weight: 600;
         text-decoration: none;
         text-align: center;
-        color: aliceblue;
-        border:3px solid black;
-        background-color: black;
-        border-radius: 2em;	
+        color: #ffffff;
+        background-color: #7957d5;
+        border-radius: 2em;
     }
 </style>
