@@ -14,8 +14,11 @@
         </div>
     </section>
     <div class="Event_create_inner">
+        <router-link to="/Signup">
+            <div class="Event_Signup Event_button">ユーザー登録する</div>
+        </router-link>
         <router-link to="/Signin">
-            <div class="Event_create_page">Sign up</div>
+            <div class="Event_Signin Event_button">サインイン</div>
         </router-link>
     </div>  
 </div>
@@ -38,7 +41,7 @@ export default {
         display: block;
         margin: 0 auto;
     }
-    .Event_create_page{
+    .Event_button{
         padding: 12px 28px;
         font-weight: 600;
         text-decoration: none;
@@ -46,5 +49,8 @@ export default {
         color: #ffffff;
         background-color: #7957d5;
         border-radius: 2em;
+    }
+    .Event_Signup{
+        margin-bottom: 30px;
     }
 </style>

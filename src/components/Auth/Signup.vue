@@ -43,7 +43,7 @@ export default {
     Signin: function () {
       firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
         .then(user => {
-          this.$router.push('/settings')
+          this.$router.push('/home')
         })
         .catch(error => {
           alert(error.message)

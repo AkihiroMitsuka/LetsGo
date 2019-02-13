@@ -82,9 +82,6 @@ header{
   font-size:20px;
   font-weight: 700;
 }
-.navgation_left{
-  
-}
 /* 共通Style */
 hr{
   margin: 6px 0 38px 0;
