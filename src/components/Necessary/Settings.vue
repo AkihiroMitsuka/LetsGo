@@ -2,13 +2,9 @@
 <div id="settings">
     <h1>Settings</h1>
     <hr>
-    <p>information</p>
-    <p>Notication</p>
 </div>
 </template>
 <script>
-export default {
-}
 </script>
 <style>
 /* 独自Style */
