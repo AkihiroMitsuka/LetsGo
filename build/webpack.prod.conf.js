@@ -104,7 +104,8 @@ const webpackConfig = merge(baseWebpackConfig, {
       staticFileGlobs: ["dist/**/*.{js,css}", "/"],
       minify: true,
       stripPrefix: "dist/",
-      dontCacheBustUrlsMatching: /\.\w{6}\./
+      dontCacheBustUrlsMatching: /\.\w{6}\./,
+      importScripts: ['./static/mysw.js']
     })
   ]
 });

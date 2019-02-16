@@ -73,7 +73,6 @@ export default {
     }
   },
   methods: {
-    createEventItem: function (newEventItem)
   }
 }
 </script>
